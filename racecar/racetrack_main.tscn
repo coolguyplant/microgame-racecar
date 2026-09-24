@@ -2,11 +2,10 @@
 
 [ext_resource type="Script" uid="uid://1xykq3ylekac" path="res://racecar/racecar_main.gd" id="1_g44wj"]
 [ext_resource type="PackedScene" uid="uid://d2y2autg5m0hc" path="res://racecar/levels/RaceTrackLevel0.tscn" id="2_6641w"]
-[ext_resource type="PackedScene" uid="uid://cpv5mu1ce0uw5" path="res://racecar/levels/RaceTrackLevel1.tscn" id="3_x5q28"]
 
 [node name="Main" type="Node2D" unique_id=385830540]
 script = ExtResource("1_g44wj")
-level_scenes = Array[PackedScene]([ExtResource("2_6641w"), ExtResource("3_x5q28")])
+level_scenes = Array[PackedScene]([ExtResource("2_6641w")])
 
 [node name="CurrentLevel" type="Node" parent="." unique_id=903408773]
 

@@ -5,4 +5,5 @@
 [resource]
 script = ExtResource("1_psr0x")
 success_ratio = 0.75
+qte_duration = 1.25
 metadata/_custom_type_script = "uid://carddfynqxf1t"
