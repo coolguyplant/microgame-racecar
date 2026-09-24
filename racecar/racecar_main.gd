@@ -1,4 +1,3 @@
-class_name RacecarMain
 extends MicroGame
 
 @export var level_scenes: Array[PackedScene] = []
@@ -7,9 +6,9 @@ extends MicroGame
 
 var _level_index := -1
 
-
 func _ready() -> void:
-	
+	difficulty = GameManager.difficulty_manager.current_difficulty
+	print(difficulty)
 	_advance_to_next_level()
 
 

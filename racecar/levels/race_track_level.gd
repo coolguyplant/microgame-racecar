@@ -30,6 +30,7 @@ var local_difficulty_scale: float = 1.0
 var global_difficulty: float
 
 func _ready() -> void:
+	_set_difficulty()
 	_fade_in()
 	var track_anchors := _compute_checkpoint_anchors(racetrack_stats.checkpoints)
 	
@@ -50,7 +51,6 @@ func _input(event: InputEvent) -> void:
 
 
 func run_game() -> void:
-	_set_difficulty()
 	await _run_countdown()
 	
 	for i in racetrack_stats.checkpoints.size():
@@ -71,6 +71,7 @@ func _run_countdown() -> void:
 
 
 func _run_checkpoint(data: CheckpointData) -> bool:
+	print(local_difficulty_scale)
 	# Randomized delay before the QTE triggers
 	_false_started = false
 	_waiting_for_qte = true
@@ -170,7 +171,7 @@ func _set_difficulty() -> void:
 	if global_difficulty == 0:
 		return
 	
-	local_difficulty_scale = global_difficulty
+	local_difficulty_scale = 1.2 - global_difficulty
 
 func _fade_in() -> void:
 	fade_rect.color.a = 1.0
